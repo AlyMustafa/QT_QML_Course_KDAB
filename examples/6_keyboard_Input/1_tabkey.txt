@@ -1,0 +1,43 @@
+import QtQuick
+import QtQuick.Window
+
+Window {
+  visible: true
+  id: root
+  color: "#0f1243"
+  width: 200
+  height: 200
+
+  TextInput {
+    anchors.left: parent.left
+    y: 16
+    anchors.right: parent.right
+    text: "field 1"
+    font.pixelSize: 32
+    color: activeFocus ? "green" : " cyan"
+    focus: true
+    activeFocusOnTab: true
+  }
+
+  TextInput {
+    anchors.left: parent.left
+    y: 64
+    anchors.right: parent.right
+    text: "field 1"
+    font.pixelSize: 32
+    color: activeFocus ? "green" : " white"
+    focus: true
+    activeFocusOnTab: true
+  }
+
+  TextInput {
+    anchors.left: parent.left
+    y: 100
+    anchors.right: parent.right
+    text: "field 1"
+    font.pixelSize: 32
+    color: activeFocus ? "green" : " yellow"
+    focus: true
+    activeFocusOnTab: true
+  }
+}

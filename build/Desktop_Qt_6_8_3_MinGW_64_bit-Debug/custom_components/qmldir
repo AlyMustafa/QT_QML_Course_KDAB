@@ -1,0 +1,7 @@
+module custom_components
+typeinfo appQML_1.qmltypes
+prefer :/qt/qml/custom_components/
+Main 1.0 Main.qml
+LineEdit 1.0 custom_components/LineEdit.qml
+LineEdit 1.0 custom_components/LineEdit.qml
+

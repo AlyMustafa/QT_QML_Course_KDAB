@@ -1,0 +1,45 @@
+import QtQuick
+import QtQuick.Window
+
+Window {
+  visible: true
+  width: 800
+  height: 800
+
+  Rectangle {
+    anchors.fill: parent
+    gradient: Gradient {
+      GradientStop {
+        position: 0.0
+        color: "#F9B2D7"
+      }
+      GradientStop {
+        position: 1.0
+        color: "#CFECF3"
+      }
+    }
+    Text {
+      id: text
+      text: qsTr("Hello Petter !")
+      anchors.bottom: lineEdit.top
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.margins: 20
+      font.pixelSize: 30
+      font.family: "montserrat"
+      font.bold: true
+      color: "white"
+    }
+    LineEdit {
+      id: lineEdit
+      anchors.centerIn: parent
+      // lineEditWidth: parent.width / 2
+      // lineEditHeight: parent.height / 8
+      lineEditColor: "#EBD6FB"
+      width: 300
+      height: 50
+      diameter: 16
+      textColor: "#687FE5"
+      borderColor: "#687FE5"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+import QtQuick
+import QtQuick.Window
+
+Flickable {
+  id: flick
+  width: 400
+  height: 400
+  contentWidth: 600
+  contentHeight: 600
+
+  Image {
+    source: "Images/wp2757832.gif"
+    width: flick.contentWidth
+    height: flick.contentHeight
+  }
+}

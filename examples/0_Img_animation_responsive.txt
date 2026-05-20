@@ -1,0 +1,74 @@
+import QtQuick
+import QtQuick.Window
+
+Window {
+  id: root
+  width: 800
+  height: 800
+  visible: true
+  color: "white"
+
+  Item {
+    property int _minside: Math.min(root.width, root.height)
+    x: (root.width - _minside) / 2
+    y: (root.height - _minside) / 2
+    width: _minside - 20
+    height: _minside - 20
+    scale: Math.min(width / back.sourceSize.width,
+                    height / back.sourceSize.height)
+
+    transformOrigin: Item.TopLeft
+    Image {
+      id: back
+      //anchors.fill: parent
+      source: "file:///D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Images/clock.png"
+      fillMode: Image.PreserveAspectFit
+      onStatusChanged: console.log(sourceSize)
+    }
+
+    Image {
+      id: hourarrow
+      // width: 100
+      // height: 100
+      // x: back.sourceSize.width / 2 //100
+      // y: back.sourceSize.height / 2 //120
+      anchors.centerIn: back
+      //anchors.fill: parent
+      source: "file:///D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Images/hour.png"
+      transform: Rotation {
+        origin.x: 310 //hourarrow.width / 2
+        origin.y: 285 //hourarrow.height / 2
+
+        RotationAnimation on angle {
+          from: 0
+          to: 360 * 2
+          duration: 10000
+          loops: Animation.Infinite
+        }
+      }
+    }
+
+    Image {
+      id: minarrow
+      // x: 100
+      // y: 120
+      anchors.centerIn: back
+
+      source: "file:///D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Images/min.png"
+
+      //fillMode: Image.PreserveAspectFit
+      // onStatusChanged: console.log(sourceSize)
+      transform: Rotation {
+        origin.x: 310 //hourarrow.width / 2
+        origin.y: 285 //hourarrow.height / 2
+
+        RotationAnimation on angle {
+          from: 0
+          to: 360 * 2
+          duration: 60000
+          loops: Animation.Infinite
+        }
+      }
+    }
+  }
+}

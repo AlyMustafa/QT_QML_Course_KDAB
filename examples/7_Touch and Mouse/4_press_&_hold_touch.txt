@@ -1,0 +1,23 @@
+import QtQuick
+import QtQuick.Window
+
+Window {
+  visible: true
+  id: root
+  color: "#0f1243"
+
+  Text {
+    id: unlock
+    anchors.centerIn: parent
+    text: "Hello Ali!"
+    font.pixelSize: 25
+
+    property bool isActive: false
+    color: isActive ? "white" : "black"
+
+    MouseArea {
+      anchors.fill: parent
+      onPressAndHold: parent.isActive = !parent.isActive
+    }
+  }
+}

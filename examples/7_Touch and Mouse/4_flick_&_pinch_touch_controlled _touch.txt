@@ -1,0 +1,36 @@
+import QtQuick
+import QtQuick.Window
+
+Flickable {
+  id: flick
+  width: 400
+  height: 400
+  contentWidth: 2000
+  contentHeight: 2000
+
+  PinchArea {
+    width: Math.max(flick.contentWidth, flick.width)
+    height: Math.max(flick.contentHeight, flick.height)
+
+    property real initialWidth
+    property real initialHeight
+
+    onPinchStarted: {
+      initialWidth = flick.contentWidth
+      initialHeight = flick.contentHeight
+    }
+
+    onPinchUpdated: flick.resizeContent(initialWidth * pinch.scale,
+                                        initialHeight * pinch.scale,
+                                        pinch.center)
+
+    onPinchFinished: flick.returnToBounds()
+
+    Image {
+      id: img
+      source: "Images/wp2757832.gif"
+      width: flick.contentWidth
+      height: flick.contentHeight
+    }
+  }
+}

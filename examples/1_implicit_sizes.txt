@@ -1,0 +1,27 @@
+import QtQuick
+import QtQuick.Window
+
+Window {
+  visible: true
+  id: root
+
+  Rectangle {
+    id: redrec
+    width: unlock.implicitWidth
+    height: unlock.implicitHeight
+    anchors.fill: parent
+    visible: true
+    color: "red"
+
+    Image {
+      id: unlock
+      source: "Images/unlocked.png"
+      width: redrec.implicitWidth
+      height: redrec.implicitHeight
+      anchors.fill: parent
+      // anchors.margins: 50
+      // width: 600
+      // height: 600
+    }
+  }
+}

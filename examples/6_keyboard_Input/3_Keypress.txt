@@ -1,0 +1,26 @@
+import QtQuick
+import QtQuick.Window
+
+Window {
+  visible: true
+  id: root
+  color: "#0f1243"
+  width: 800
+  height: 800
+  Rectangle {
+    anchors.centerIn: parent
+    color: "#0f1243"
+    focus: true
+    Image {
+      id: rocket
+      source: "file:///D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Images/rocket.png"
+      anchors.centerIn: parent
+      //focus: true
+
+      //anchors.fill: parent
+    }
+
+    Keys.onLeftPressed: rocket.rotation = (rocket.rotation - 10) % 360
+    Keys.onRightPressed: rocket.rotation = (rocket.rotation + 10) % 360
+  }
+}

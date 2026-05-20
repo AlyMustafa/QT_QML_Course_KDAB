@@ -1,0 +1,69 @@
+import QtQuick
+import QtQuick.Window
+
+Window {
+  visible: true
+  width: 800
+  height: 650
+  color: startBtn.isChecked ? "cyan" : "white"
+
+  Row {
+    id: toprow
+    anchors {
+      top: parent.top
+      horizontalCenter: parent.horizontalCenter
+    }
+    spacing: 20
+    Button {
+      id: startBtn
+      text: "Start"
+    }
+    Button {
+      text: "Stop"
+    }
+  }
+
+  Rectangle {
+    anchors {
+      horizontalCenter: parent.horizontalCenter
+      top: toprow.bottom
+      bottom: bottomrow.top
+    }
+    //color: "cyan"
+    width: parent.width
+
+    Image {
+      source: "Images/wp2757832.gif"
+      anchors.fill: parent
+    }
+    // height: parent.height / 2
+  }
+
+  Row {
+    id: bottomrow
+    anchors {
+      bottom: parent.bottom
+      horizontalCenter: parent.horizontalCenter
+    }
+    spacing: 20
+    Button {
+      text: "Start"
+    }
+    Button {
+      text: "Stop"
+    }
+  }
+
+  // Rectangle {
+  //   y: parent.height / 2
+  //   anchors.horizontalCenter: parent.horizontalCenter
+  //   width: parent.width
+  //   height: parent.height / 2
+  //   color: ck2.checked ? "cyan" : "#F9B2D7"
+
+  //   CheckBox {
+  //     id: ck2
+  //     anchors.centerIn: parent
+  //   }
+  // }
+}

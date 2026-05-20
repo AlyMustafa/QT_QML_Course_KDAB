@@ -1,0 +1,79 @@
+import QtQuick
+import QtQuick.Window
+
+Window {
+  visible: true
+  id: root
+  color: "#0f1243"
+  width: 1000
+  height: 1000
+
+  MultiPointTouchArea {
+    anchors.fill: parent
+    minimumTouchPoints: 1
+    maximumTouchPoints: 5
+
+    touchPoints: [
+      TouchPoint {
+        id: t1
+      },
+      TouchPoint {
+        id: t2
+      },
+      TouchPoint {
+        id: t3
+      },
+      TouchPoint {
+        id: t4
+      },
+      TouchPoint {
+        id: t5
+      }
+    ]
+  }
+
+  Rectangle {
+    x: t1.x - width / 2
+    y: t1.y - height / 2
+    width: 200
+    height: 200
+    visible: t1.pressed
+    color: "red"
+  }
+
+  Rectangle {
+    x: t2.x - width / 2
+    y: t2.y - height / 2
+    width: 200
+    height: 200
+    color: "cyan"
+    visible: t2.pressed
+  }
+
+  Rectangle {
+    x: t3.x - width / 2
+    y: t3.y - height / 2
+    width: 200
+    height: 200
+    color: "green"
+    visible: t3.pressed
+  }
+
+  Rectangle {
+    x: t4.x - width / 2
+    y: t4.y - height / 2
+    width: 200
+    height: 200
+    color: "gray"
+    visible: t4.pressed
+  }
+
+  Rectangle {
+    x: t5.x - width / 2
+    y: t5.y - height / 2
+    width: 200
+    height: 200
+    color: "yellow"
+    visible: t5.pressed
+  }
+}

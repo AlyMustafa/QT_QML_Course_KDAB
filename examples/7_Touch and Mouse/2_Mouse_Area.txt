@@ -1,0 +1,92 @@
+import QtQuick
+import QtQuick.Window
+
+Window {
+  visible: true
+  id: root
+  width: 680
+  height: 240
+  color: "gray"
+
+  Rectangle {
+    id: one
+    width: 200
+    height: 200
+    visible: true
+    color: go_btn.containsMouse ? "darkgreen" : "green"
+    //anchors.fill: parent
+    anchors {
+      verticalCenter: parent.verticalCenter
+      left: parent.left
+      leftMargin: 20
+    }
+
+    MouseArea {
+      id: go_btn
+      anchors.fill: parent
+      hoverEnabled: true
+    }
+
+    Text {
+      id: go_txt
+      anchors.centerIn: parent
+      text: "GO !"
+      font.pixelSize: 20
+      font.bold: true
+    }
+  }
+
+  Rectangle {
+    id: two
+    width: 200
+    height: 200
+    visible: true
+    color: wait_btn.containsMouse ? "darkwhite" : "white"
+    anchors {
+      centerIn: parent
+    }
+
+    MouseArea {
+      id: wait_btn
+      anchors.fill: parent
+      hoverEnabled: true
+    }
+
+    Text {
+      anchors.centerIn: parent
+      text: "Wait !"
+      font.pixelSize: 20
+      font.bold: true
+      color: wait_btn.containsMouse ? "white" : "darkwhite"
+    }
+  }
+
+  Rectangle {
+    id: three
+    width: 200
+    height: 200
+    visible: true
+    color: stop_btn.containsMouse ? "darkred" : "red"
+    anchors {
+      verticalCenter: parent.verticalCenter
+      right: parent.right
+      rightMargin: 20
+    }
+
+    MouseArea {
+      id: stop_btn
+      anchors.fill: parent
+      hoverEnabled: true
+      onClicked: txt_stp.font.bold = !txt_stp.font.bold
+    }
+
+    Text {
+      id: txt_stp
+      anchors.centerIn: parent
+      text: "Stop !"
+      font.pixelSize: 20
+      font.bold: true
+      color: stop_btn.containsMouse ? "white" : "darkwhite"
+    }
+  }
+}

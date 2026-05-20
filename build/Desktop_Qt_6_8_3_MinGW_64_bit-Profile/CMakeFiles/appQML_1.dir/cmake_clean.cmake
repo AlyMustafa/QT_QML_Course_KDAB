@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  ".qt/rcc/qrc_appQML_1_raw_qml_0.cpp"
+  ".qt/rcc/qrc_qmake_QML_1.cpp"
+  ".rcc/qmlcache/appQML_1_Main_qml.cpp"
+  ".rcc/qmlcache/appQML_1_Main_qml.cpp.aotstats"
+  ".rcc/qmlcache/appQML_1_qmlcache_loader.cpp"
+  "CMakeFiles/appQML_1.dir/appQML_1_autogen/mocs_compilation.cpp.obj"
+  "CMakeFiles/appQML_1.dir/appQML_1_autogen/mocs_compilation.cpp.obj.d"
+  "CMakeFiles/appQML_1.dir/appqml_1_qmltyperegistrations.cpp.obj"
+  "CMakeFiles/appQML_1.dir/appqml_1_qmltyperegistrations.cpp.obj.d"
+  "CMakeFiles/appQML_1.dir/build/Desktop_Qt_6_8_3_MinGW_64_bit-Profile/.qt/rcc/qrc_appQML_1_raw_qml_0.cpp.obj"
+  "CMakeFiles/appQML_1.dir/build/Desktop_Qt_6_8_3_MinGW_64_bit-Profile/.qt/rcc/qrc_appQML_1_raw_qml_0.cpp.obj.d"
+  "CMakeFiles/appQML_1.dir/build/Desktop_Qt_6_8_3_MinGW_64_bit-Profile/.qt/rcc/qrc_qmake_QML_1.cpp.obj"
+  "CMakeFiles/appQML_1.dir/build/Desktop_Qt_6_8_3_MinGW_64_bit-Profile/.qt/rcc/qrc_qmake_QML_1.cpp.obj.d"
+  "CMakeFiles/appQML_1.dir/build/Desktop_Qt_6_8_3_MinGW_64_bit-Profile/.rcc/qmlcache/appQML_1_Main_qml.cpp.obj"
+  "CMakeFiles/appQML_1.dir/build/Desktop_Qt_6_8_3_MinGW_64_bit-Profile/.rcc/qmlcache/appQML_1_Main_qml.cpp.obj.d"
+  "CMakeFiles/appQML_1.dir/build/Desktop_Qt_6_8_3_MinGW_64_bit-Profile/.rcc/qmlcache/appQML_1_qmlcache_loader.cpp.obj"
+  "CMakeFiles/appQML_1.dir/build/Desktop_Qt_6_8_3_MinGW_64_bit-Profile/.rcc/qmlcache/appQML_1_qmlcache_loader.cpp.obj.d"
+  "CMakeFiles/appQML_1.dir/main.cpp.obj"
+  "CMakeFiles/appQML_1.dir/main.cpp.obj.d"
+  "CMakeFiles/appQML_1_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/appQML_1_autogen.dir/ParseCache.txt"
+  "appQML_1_autogen"
+  "QML_1/appQML_1.qmltypes"
+  "appQML_1.exe"
+  "appQML_1.exe.manifest"
+  "appQML_1.pdb"
+  "appQML_1_autogen/mocs_compilation.cpp"
+  "appQML_1_autogen/timestamp"
+  "appqml_1_qmltyperegistrations.cpp"
+  "libappQML_1.dll.a"
+  "meta_types/appQML_1_json_file_list.txt"
+  "meta_types/appQML_1_json_file_list.txt.timestamp"
+  "meta_types/qt6appqml_1_relwithdebinfo_metatypes.json"
+  "meta_types/qt6appqml_1_relwithdebinfo_metatypes.json.gen"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/appQML_1.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

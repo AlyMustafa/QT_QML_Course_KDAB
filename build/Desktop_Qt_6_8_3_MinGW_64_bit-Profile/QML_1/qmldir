@@ -1,0 +1,5 @@
+module QML_1
+typeinfo appQML_1.qmltypes
+prefer :/qt/qml/QML_1/
+Main 1.0 Main.qml
+

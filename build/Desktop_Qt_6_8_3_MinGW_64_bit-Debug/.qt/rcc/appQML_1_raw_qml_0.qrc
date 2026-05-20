@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="/qt/qml/QML_1/">
+    <file alias="Main.qml">D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Main.qml</file>
+    <file alias="LineEdit.qml">D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/LineEdit.qml</file>
+    <file alias="LineEdit.qml">D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/LineEdit.qml</file>
+    <file alias="CheckBox.qml">D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/CheckBox.qml</file>
+    <file alias="Button.qml">D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Button.qml</file>
+    <file alias="Images/ssyss.png">D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Images/ssyss.png</file>
+    <file alias="Images/wp2757832.gif">D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Images/wp2757832.gif</file>
+    <file alias="Images/Spider-Man-Becomes-Black-Spider-Man-Vemon.jpg">D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Images/Spider-Man-Becomes-Black-Spider-Man-Vemon.jpg</file>
+    <file alias="Images/unlocked.png">D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Images/unlocked.png</file>
+    <file alias="Images/clock.png">D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Images/clock.png</file>
+    <file alias="Images/hour.png">D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Images/hour.png</file>
+    <file alias="Images/min.png">D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Images/min.png</file>
+    <file alias="Images/rocket.png">D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Images/rocket.png</file>
+    <file alias="Images/checked.svg">D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Images/checked.svg</file>
+    <file alias="Images/unchecked.svg">D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Images/unchecked.svg</file>
+    <file alias="Images/button.png">D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Images/button.png</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,10 @@
+--bare
+-I
+D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/build/Desktop_Qt_6_8_3_MinGW_64_bit-Profile
+-I
+C:/Qt/6.8.3/mingw_64/qml
+--resource
+D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/build/Desktop_Qt_6_8_3_MinGW_64_bit-Profile/.qt/rcc/qmake_QML_1.qrc
+--resource
+D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/build/Desktop_Qt_6_8_3_MinGW_64_bit-Profile/.qt/rcc/appQML_1_raw_qml_0.qrc
+D:/MyProjects/GUIs/QML_Projects/QML_1/QML_1/Main.qml
