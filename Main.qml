@@ -1,46 +1,49 @@
-import QtQuick
 
-Item {
-  id: root
-  property color lineEditColor: "white"
-  property color borderColor: "cyan"
-  property int diameter: 8
-  property alias text: textInput.text
-  property alias textColor: textInput.color
 
-  //Signals
-  signal returnPressed(string text)
+/*************************************************************************
+ *
+ * Copyright (c) 2013-2019, Klaralvdalens Datakonsult AB (KDAB)
+ * All rights reserved.
+ *
+ * See the LICENSE.txt file shipped along with this file for the license.
+ *
+ *************************************************************************/
+import QtQuick 2.0
 
-  Rectangle {
-    anchors.fill: parent
+Rectangle {
+  id: window
+  color: "white"
+  width: 400
+  height: 150
 
-    color: lineEditColor
-    border.color: borderColor
-    radius: diameter / 2
+  Column {
+    id: column
+    anchors.verticalCenter: parent.verticalCenter
+    spacing: 15
+    width: parent.width
 
-    smooth: true
-    clip: true
-    focus: true
-
-    TextInput {
-      id: textInput
-      anchors.fill: parent
-      font.pixelSize: parent.height - 25
-      anchors.margins: 5
-      text: "write here..."
-      color: activeFocus ? "black" : "#gray"
-      opacity: activeFocus ? 1 : 0.5
+    InputField {
+      id: firstName
       focus: true
-      font.family: "montserrat "
-      onActiveFocusChanged: {
-        if (activeFocus && text === "write here...")
-          clear()
-        if (!activeFocus && text === "")
-          text = "write here..."
+      title: "First Name:"
+      KeyNavigation.down: lastName
+      anchors {
+        left: parent.left
+        right: parent.right
+        leftMargin: 10
+        rightMargin: 10
       }
+    }
 
-      Keys.onReturnPressed: {
-        root.returnPressed(text)
+    InputField {
+      id: lastName
+      title: "Last Name:"
+      KeyNavigation.up: firstName
+      anchors {
+        left: parent.left
+        right: parent.right
+        leftMargin: 10
+        rightMargin: 10
       }
     }
   }

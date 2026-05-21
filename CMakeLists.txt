@@ -35,6 +35,8 @@ qt_add_qml_module(appQML_1
             QML_FILES LineEdit.qml
             QML_FILES CheckBox.qml
             QML_FILES Button.qml
+            QML_FILES InputField.qml
+            QML_FILES InputField.qml
 )
 
 
