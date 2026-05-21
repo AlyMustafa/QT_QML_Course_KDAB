@@ -1,43 +1,47 @@
 import QtQuick
-import QtQuick.Window
 
-Window {
-  visible: true
-  width: 300
-  height: 100
-  color: "cyan"
+Item {
+  id: root
+  property color lineEditColor: "white"
+  property color borderColor: "cyan"
+  property int diameter: 8
+  property alias text: textInput.text
+  property alias textColor: textInput.color
 
-  Loader {
-    id: loadPage
-    source: "LineEdit.qml"
+  //Signals
+  signal returnPressed(string text)
 
-    height: 50
+  Rectangle {
+    anchors.fill: parent
 
-    anchors {
-      left: parent.left
-      right: parent.right
-      top: parent.top
+    color: lineEditColor
+    border.color: borderColor
+    radius: diameter / 2
+
+    smooth: true
+    clip: true
+    focus: true
+
+    TextInput {
+      id: textInput
+      anchors.fill: parent
+      font.pixelSize: parent.height - 25
+      anchors.margins: 5
+      text: "write here..."
+      color: activeFocus ? "black" : "#gray"
+      opacity: activeFocus ? 1 : 0.5
+      focus: true
+      font.family: "montserrat "
+      onActiveFocusChanged: {
+        if (activeFocus && text === "write here...")
+          clear()
+        if (!activeFocus && text === "")
+          text = "write here..."
+      }
+
+      Keys.onReturnPressed: {
+        root.returnPressed(text)
+      }
     }
-  }
-
-  Binding {
-    target: loadPage.item
-    property: "lineEditColor"
-    value: "orange"
-  }
-
-  Text {
-    id: txt1
-    anchors {
-      top: loadPage.bottom
-      right: loadPage.right
-      left: loadPage.left
-    }
-    height: 50
-  }
-
-  Connections {
-    target: loadPage.item
-    onReturnPressed: txt1.text = "Enter Pressed"
   }
 }
