@@ -31,34 +31,39 @@ Rectangle {
     id: rect
     width: 100
     height: 100
-      x: 350
-      y:50
+      x: 700
+      y:700
       radius: 50
 
 color: "#F10000"
 }
 
+  MouseArea{
+      anchors.fill: parent
+      onClicked: {
+          //anim.to = (rect.x==700 ? 0 : 700)
+          if(rect.x==0){
+              rect.x=700
+              rect.y=700
 
+          }
 
-  SequentialAnimation {
-      loops: Animation.Infinite
-      NumberAnimation{
-          target:  rect
-          property: "y"
-          to:750
-          duration: 500
-          easing.type: Easing.InQuad
+          anim.running=true
+
 
       }
-      
-      NumberAnimation{
-          target:  rect
-          property: "y"
-          to:50
-          duration: 500
-          easing.type: Easing.OutQuad
-
-      }
-      running: true
   }
+
+  NumberAnimation{
+      id: anim
+      target:  rect
+      properties: "x,y"
+      to:rect.x-100 ; duration: 100
+//running: true
+
+
+  }
+
+
 }
+

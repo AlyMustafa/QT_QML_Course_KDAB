@@ -32,33 +32,45 @@ Rectangle {
     width: 100
     height: 100
       x: 350
-      y:50
+      y:350
       radius: 50
 
 color: "#F10000"
 }
 
+  // MouseArea{
+  //     anchors.fill: parent
+  //     onClicked: {
+  //         //anim.to = (rect.x==700 ? 0 : 700)
+  //         if(rect.x==0){
+  //             rect.x=700
+  //             rect.y=700
+
+  //         }
+
+  //         anim.running=true
 
 
-  SequentialAnimation {
-      loops: Animation.Infinite
+  //     }
+  // }
+
+  ParallelAnimation{
       NumberAnimation{
           target:  rect
-          property: "y"
-          to:750
-          duration: 500
-          easing.type: Easing.InQuad
-
+          properties: "scale"
+          from: 0.1
+          to:1.0
+          duration: 1000
       }
       
       NumberAnimation{
           target:  rect
-          property: "y"
-          to:50
-          duration: 500
-          easing.type: Easing.OutQuad
-
+          properties: "opacity"
+          from:0.1
+          to:1
+          duration: 1000
       }
-      running: true
+      running: true   
   }
 }
+
