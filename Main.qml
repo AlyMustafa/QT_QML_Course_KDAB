@@ -1,132 +1,144 @@
-
-
-/*************************************************************************
- *
- * Copyright (c) 2013-2019, Klaralvdalens Datakonsult AB (KDAB)
- * All rights reserved.
- *
- * See the LICENSE.txt file shipped along with this file for the license.
- *
- *************************************************************************/
 import QtQuick
+import QtQuick.Window
 
-<<<<<<< Updated upstream
-Rectangle {
-
-
-    width: 800
-    height: 800
-  //anchors.fill: parent
-  gradient: Gradient {
-    GradientStop {
-      position: 0.0
-      color: "#F9B2D7"
-    }
-    GradientStop {
-      position: 1.0
-      color: "#CFECF3"
-=======
 Window {
-  width: 1000
-  height: 700
-  color: "#077A7D"
-  title: qsTr("Hello Positioners")
   visible: true
-
-  Component {
-
-    id: imgDelegate
-
-    Image {
-      id: image
-      required property int index
-
-      source: Qt.resolvedUrl(`Images/image${index}.jpg`)
-
-      asynchronous: true
-
-      width: 100
-      height: 100
-      Text {
-        anchors.centerIn: parent
-        text: image.index
-        font.pixelSize: 30
-        color: "white"
-        style: Text.Outline
-        styleColor: "black"
-      }
-      Rectangle {
-        anchors.fill: parent
-        visible: true
-        color: "transparent"
-        border {
-
-          width: 5
-          color: if (image.index == 0)
-                   "#FF5722"
-                 else if (image.index == 9)
-                   "#303841"
-                 else
-                   "transparent"
-        }
-      }
->>>>>>> Stashed changes
-    }
-  }
+  width: 800
+  height: 800
 
   Rectangle {
-<<<<<<< Updated upstream
-    id: rect
-    width: 100
-    height: 100
-      x: 350
-      y:50
-      radius: 50
-
-color: "#F10000"
-}
-
-
-
-  SequentialAnimation {
-      loops: Animation.Infinite
-      NumberAnimation{
-          target:  rect
-          property: "y"
-          to:750
-          duration: 500
-          easing.type: Easing.InQuad
-
-      }
-      
-      NumberAnimation{
-          target:  rect
-          property: "y"
-          to:50
-          duration: 500
-          easing.type: Easing.OutQuad
-
-      }
-      running: true
-=======
-    anchors.fill: flow
-    visible: true
-    color: "#E05454"
-  }
-
-  Flow {
-    id: flow
-    visible: true
+    id: roots
     anchors.fill: parent
-    LayoutMirroring.enabled: true
-    layoutDirection: Qt.RightToLeft
-
-    spacing: 10
-    padding: 10
-    Repeater {
-      model: 10
-      delegate: imgDelegate
+    gradient: Gradient {
+      GradientStop {
+        position: 0.0
+        color: "#F9B2D7"
+      }
+      GradientStop {
+        position: 1.0
+        color: "#CFECF3"
+      }
     }
->>>>>>> Stashed changes
+
+    Rectangle {
+
+      width: 150
+      height: 360
+      color: "black"
+      anchors.centerIn: parent
+      Rectangle {
+        id: red
+        width: 100
+        height: 100
+        x: 25
+        y: 15
+        radius: 50
+        color: "red"
+      }
+
+      Rectangle {
+        id: yellow
+        width: 100
+        height: 100
+        x: 25
+        y: 130
+        radius: 50
+        color: "yellow"
+      }
+
+      Rectangle {
+        id: green
+        width: 100
+        height: 100
+        x: 25
+        y: 245
+        radius: 50
+        color: "green"
+      }
+    }
+
+    MouseArea {
+      anchors.fill: rect
+      onClicked: {
+        switch (roots.state) {
+        case "":
+          roots.state = "one"
+          break
+        }
+      }
+    }
+    state: ""
+
+    states: [
+
+      State {
+        name: "go"
+        PropertyChanges {
+          target: red
+          color: "grey"
+        }
+        PropertyChanges {
+          target: yellow
+          color: "grey"
+        }
+        PropertyChanges {
+          target: green
+          color: "green"
+        }
+      },
+
+      State {
+        name: "wait"
+        PropertyChanges {
+          target: red
+          color: "red"
+        }
+        PropertyChanges {
+          target: yellow
+          color: "yellow"
+        }
+        PropertyChanges {
+          target: green
+          color: "grey"
+        }
+      },
+
+      State {
+        name: "slow"
+        PropertyChanges {
+          target: red
+          color: "grey"
+        }
+        PropertyChanges {
+          target: yellow
+          color: "yellow"
+        }
+        PropertyChanges {
+          target: green
+          color: "grey"
+        }
+      },
+
+      State {
+        name: "stop"
+        PropertyChanges {
+          target: red
+          x: 200
+          y: 200
+        }
+        PropertyChanges {
+          target: red
+          color: "grey"
+        }
+        PropertyChanges {
+          target: yellow
+          color: "grey"
+        }
+        PropertyChanges {
+          target: green
+          color: "green"
+        }
+      }
+    ]
   }
 }

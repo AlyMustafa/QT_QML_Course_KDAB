@@ -1,0 +1,35 @@
+<RCC>
+  <qresource prefix="/qt/qml/QML_1/">
+    <file alias="Main.qml">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Main.qml</file>
+    <file alias="LineEdit.qml">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/LineEdit.qml</file>
+    <file alias="InputField.qml">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/InputField.qml</file>
+    <file alias="Button.qml">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Button.qml</file>
+    <file alias="CheckBox.qml">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/CheckBox.qml</file>
+    <file alias="LineEdit.qml">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/LineEdit.qml</file>
+    <file alias="CheckBox.qml">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/CheckBox.qml</file>
+    <file alias="Button.qml">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Button.qml</file>
+    <file alias="InputField.qml">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/InputField.qml</file>
+    <file alias="Images/ssyss.png">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/ssyss.png</file>
+    <file alias="Images/wp2757832.gif">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/wp2757832.gif</file>
+    <file alias="Images/Spider-Man-Becomes-Black-Spider-Man-Vemon.jpg">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/Spider-Man-Becomes-Black-Spider-Man-Vemon.jpg</file>
+    <file alias="Images/unlocked.png">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/unlocked.png</file>
+    <file alias="Images/clock.png">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/clock.png</file>
+    <file alias="Images/hour.png">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/hour.png</file>
+    <file alias="Images/min.png">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/min.png</file>
+    <file alias="Images/rocket.png">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/rocket.png</file>
+    <file alias="Images/checked.svg">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/checked.svg</file>
+    <file alias="Images/unchecked.svg">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/unchecked.svg</file>
+    <file alias="Images/button.png">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/button.png</file>
+    <file alias="Images/image0.jpg">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/image0.jpg</file>
+    <file alias="Images/image1.jpg">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/image1.jpg</file>
+    <file alias="Images/image2.jpg">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/image2.jpg</file>
+    <file alias="Images/image3.jpg">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/image3.jpg</file>
+    <file alias="Images/image4.jpg">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/image4.jpg</file>
+    <file alias="Images/image5.jpg">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/image5.jpg</file>
+    <file alias="Images/image6.jpg">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/image6.jpg</file>
+    <file alias="Images/image7.jpg">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/image7.jpg</file>
+    <file alias="Images/image8.jpg">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/image8.jpg</file>
+    <file alias="Images/image9.jpg">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/Images/image9.jpg</file>
+  </qresource>
+</RCC>
+

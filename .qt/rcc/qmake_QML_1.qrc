@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/QML_1">
+    <file alias="qmldir">D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/QML_1/qmldir</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,13 @@
+--resource
+D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/.qt/rcc/qmake_QML_1.qrc
+--resource
+D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/.qt/rcc/appQML_1_raw_qml_0.qrc
+/qt/qml/QML_1/Main.qml
+/qt/qml/QML_1/LineEdit.qml
+/qt/qml/QML_1/InputField.qml
+/qt/qml/QML_1/Button.qml
+/qt/qml/QML_1/CheckBox.qml
+/qt/qml/QML_1/LineEdit.qml
+/qt/qml/QML_1/CheckBox.qml
+/qt/qml/QML_1/Button.qml
+/qt/qml/QML_1/InputField.qml

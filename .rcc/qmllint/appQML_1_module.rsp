@@ -1,0 +1,10 @@
+-I
+D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB
+-I
+C:/Qt/6.8.3/mingw_64/qml
+--resource
+D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/.qt/rcc/qmake_QML_1.qrc
+--resource
+D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/.qt/rcc/appQML_1_raw_qml_0.qrc
+--module
+QML_1

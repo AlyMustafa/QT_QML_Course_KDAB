@@ -1,0 +1,14 @@
+-rootPath
+D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB
+-cmake-output
+-output-file
+D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/.qt/qml_imports/appQML_1_conf.cmake
+-importPath
+D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/QML_1
+-importPath
+D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB
+-importPath
+C:/Qt/6.8.3/mingw_64/qml
+-qrcFiles
+D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/.qt/rcc/qmake_QML_1.qrc
+D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/.qt/rcc/appQML_1_raw_qml_0.qrc

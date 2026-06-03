@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(QML_1 VERSION 0.1 LANGUAGES CXX)
+project(QT_QML_Course_KDAB VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
