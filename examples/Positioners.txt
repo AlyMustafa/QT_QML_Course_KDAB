@@ -10,22 +10,6 @@
  *************************************************************************/
 import QtQuick
 
-<<<<<<< Updated upstream
-Rectangle {
-
-
-    width: 800
-    height: 800
-  //anchors.fill: parent
-  gradient: Gradient {
-    GradientStop {
-      position: 0.0
-      color: "#F9B2D7"
-    }
-    GradientStop {
-      position: 1.0
-      color: "#CFECF3"
-=======
 Window {
   width: 1000
   height: 700
@@ -70,45 +54,10 @@ Window {
                    "transparent"
         }
       }
->>>>>>> Stashed changes
     }
   }
 
   Rectangle {
-<<<<<<< Updated upstream
-    id: rect
-    width: 100
-    height: 100
-      x: 350
-      y:50
-      radius: 50
-
-color: "#F10000"
-}
-
-
-
-  SequentialAnimation {
-      loops: Animation.Infinite
-      NumberAnimation{
-          target:  rect
-          property: "y"
-          to:750
-          duration: 500
-          easing.type: Easing.InQuad
-
-      }
-      
-      NumberAnimation{
-          target:  rect
-          property: "y"
-          to:50
-          duration: 500
-          easing.type: Easing.OutQuad
-
-      }
-      running: true
-=======
     anchors.fill: flow
     visible: true
     color: "#E05454"
@@ -127,6 +76,5 @@ color: "#F10000"
       model: 10
       delegate: imgDelegate
     }
->>>>>>> Stashed changes
   }
 }

@@ -34,6 +34,17 @@ qt_add_qml_module(appQML_1
             Images/checked.svg
             Images/unchecked.svg
             Images/button.png
+            Images/image0.jpg
+            Images/image1.jpg
+            Images/image2.jpg
+            Images/image3.jpg
+            Images/image4.jpg
+            Images/image5.jpg
+            Images/image6.jpg
+            Images/image7.jpg
+            Images/image8.jpg
+            Images/image9.jpg
+
             QML_FILES LineEdit.qml
             QML_FILES CheckBox.qml
             QML_FILES Button.qml
