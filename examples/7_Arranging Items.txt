@@ -1,0 +1,65 @@
+import QtQuick
+import QtQuick.Window
+
+Window {
+  visible: true
+  width: 800
+  height: 800
+
+  Rectangle {
+    id: roots
+    anchors.fill: parent
+    gradient: Gradient {
+      GradientStop {
+        position: 0.0
+        color: "#F9B2D7"
+      }
+      GradientStop {
+        position: 1.0
+        color: "#CFECF3"
+      }
+    }
+
+    Component {
+      id: rectDelegate
+      Rectangle {
+        id: rects
+        //anchors.fill: parent
+        width: 50
+        height: 50
+        gradient: Gradient {
+          GradientStop {
+            position: 0.0
+            color: "#0055DA"
+          }
+          GradientStop {
+            position: 1.0
+            color: "#00C68D"
+          }
+        }
+      }
+    }
+    Rectangle {
+      id: rectt
+      width: grids.implicitWidth
+      height: grids.implicitHeight
+      anchors.centerIn: roots
+      color: "white"
+
+      Grid {
+        id: grids
+        rows: 5
+        columns: 5
+        spacing: 10
+        padding: 10
+
+        // anchors.fill: rectt
+        Repeater {
+          model: 25
+          //delegate: Button {}
+          delegate: rectDelegate
+        }
+      }
+    }
+  }
+}
