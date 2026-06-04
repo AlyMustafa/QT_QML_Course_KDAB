@@ -58,25 +58,25 @@ Window {
       }
     }
 
-    MouseArea {
-      anchors.fill: parent
-      onClicked: {
-        switch (roots.state) {
-        case "":
-            roots.state = "stop"
-          break
-        case "slow":
-            roots.state = "stop"
-            break
-        case "stop":
-            roots.state = "go"
-            break
-        case "go":
-            roots.state = "slow"
-            break
-        }
-      }
-    }
+    // MouseArea {
+    //   anchors.fill: parent
+    //   onClicked: {
+    //     switch (roots.state) {
+    //     case "":
+    //         roots.state = "stop"
+    //       break
+    //     case "slow":
+    //         roots.state = "stop"
+    //         break
+    //     case "stop":
+    //         roots.state = "go"
+    //         break
+    //     case "go":
+    //         roots.state = "slow"
+    //         break
+    //     }
+    //   }
+    // }
     state: ""
 
     states: [
@@ -145,19 +145,19 @@ Window {
         }
       }
     ]
-    transitions: [
-        Transition {
-            from: "*"
-            to: "*"
 
-            PropertyAnimation{
-                target: [red , green , yellow]
-                properties: "color"
-                duration: 1000
-            }
+  Timer{
+      interval: 200
+      repeat: true
+      running: true
+      onTriggered: {
+          var states  = ["go" , "wait" , "stop" ,"slow"]
+var nextIndex = (states.indexOf(parent.state) + 1) % states.length
+      parent.state = states[nextIndex]
+      }
 
-        }
-    ]
+  }
 
   }
 }
+

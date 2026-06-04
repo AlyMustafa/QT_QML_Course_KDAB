@@ -101,7 +101,7 @@ Window {
         name: "wait"
         PropertyChanges {
           target: red
-          color: "grey"
+          color: "red"
         }
         PropertyChanges {
           target: yellow
@@ -145,19 +145,6 @@ Window {
         }
       }
     ]
-    transitions: [
-        Transition {
-            from: "*"
-            to: "*"
-
-            PropertyAnimation{
-                target: [red , green , yellow]
-                properties: "color"
-                duration: 1000
-            }
-
-        }
-    ]
-
   }
 }
+
