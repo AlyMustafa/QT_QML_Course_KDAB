@@ -49,7 +49,7 @@
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 3482,
+				"line" : 3488,
 				"parent" : 3
 			},
 			{
@@ -61,7 +61,7 @@
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 3488,
+				"line" : 3482,
 				"parent" : 3
 			},
 			{
@@ -87,11 +87,11 @@
 	[
 		{
 			"backtrace" : 6,
-			"id" : "appQML_1_copy_qml::@6890427a1f51a3e7e1df"
+			"id" : "appQML_1_copy_res::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 8,
-			"id" : "appQML_1_copy_res::@6890427a1f51a3e7e1df"
+			"id" : "appQML_1_copy_qml::@6890427a1f51a3e7e1df"
 		}
 	],
 	"paths" : 

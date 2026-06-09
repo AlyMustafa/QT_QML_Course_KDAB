@@ -100,13 +100,13 @@
 			{
 				"command" : 3,
 				"file" : 3,
-				"line" : 1459,
+				"line" : 1396,
 				"parent" : 12
 			},
 			{
 				"command" : 3,
 				"file" : 3,
-				"line" : 1396,
+				"line" : 1459,
 				"parent" : 12
 			}
 		]
@@ -148,11 +148,11 @@
 		},
 		{
 			"backtrace" : 13,
-			"id" : "Qt6::moc::@6890427a1f51a3e7e1df"
+			"id" : "Qt6::cmake_automoc_parser::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 14,
-			"id" : "Qt6::cmake_automoc_parser::@6890427a1f51a3e7e1df"
+			"id" : "Qt6::moc::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 4,

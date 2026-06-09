@@ -1,0 +1,92 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 10,
+                        "durationMicroseconds": 813,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 6
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 11,
+                        "durationMicroseconds": 222,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 7
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 13,
+                        "durationMicroseconds": 204,
+                        "errorMessage": "Cannot load property checked from (component in D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/CheckBox.qml)::parent with type QQuickItem.",
+                        "functionName": "source",
+                        "line": 13
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 19,
+                        "durationMicroseconds": 326,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 11
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 29,
+                        "durationMicroseconds": 288,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 12
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 19,
+                        "durationMicroseconds": 338,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 18
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 29,
+                        "durationMicroseconds": 537,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 19
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 21,
+                        "durationMicroseconds": 1233,
+                        "errorMessage": "",
+                        "functionName": "pixelSize",
+                        "line": 21
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 16,
+                        "durationMicroseconds": 226,
+                        "errorMessage": "Cannot load property checked from (component in D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/CheckBox.qml)::parent with type QQuickItem.",
+                        "functionName": "onClicked",
+                        "line": 27
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 19,
+                        "durationMicroseconds": 194,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 26
+                    }
+                ],
+                "filepath": "D:/MyProjects/GUIs/QT_QML_Course_KDAB/QT_QML_Course_KDAB/CheckBox.qml"
+            }
+        ],
+        "moduleId": "QML_1(appQML_1)"
+    }
+]
