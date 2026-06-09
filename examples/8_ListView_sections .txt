@@ -12,11 +12,11 @@ Window {
     gradient: Gradient {
       GradientStop {
         position: 0.0
-        color: "#303841"
+        color: "#F9B2D7"
       }
       GradientStop {
         position: 1.0
-        color: "#FF5722"
+        color: "#CFECF3"
       }
     }
 
@@ -24,36 +24,47 @@ Window {
       id: nameModel
       ListElement {
         name: "Alice"
+        team: "A"
       }
       ListElement {
         name: "Bob"
+        team: "A"
       }
       ListElement {
         name: "Jane"
+        team: "A"
       }
       ListElement {
         name: "Victor"
+        team: "B"
       }
       ListElement {
         name: "Wendy"
+        team: "B"
       }
       ListElement {
         name: "Ali"
+        team: "B"
       }
       ListElement {
         name: "Alice"
+        team: "B"
       }
       ListElement {
         name: "Bob"
+        team: "C"
       }
       ListElement {
         name: "Jane"
+        team: "C"
       }
       ListElement {
         name: "Victor"
+        team: "C"
       }
       ListElement {
         name: "Wendy"
+        team: "C"
       }
     }
 
@@ -61,17 +72,12 @@ Window {
       id: nameDelegate
       Text {
         readonly property ListView __lv: ListView.view
-        // width: parent.width
+        width: parent.width
         text: model.name
         font.pixelSize: 32
         MouseArea {
           anchors.fill: parent
-          onClicked: {
-            nameModel.insert(index, {
-                               "name": "Item #" + nameModel.count
-                             })
-            parent.__lv.currentIndex = model.index
-          }
+          onClicked: parent.__lv.currentIndex = model.index
         }
       }
     }
@@ -86,66 +92,46 @@ Window {
       clip: true
       onCurrentIndexChanged: console.log(currentIndex)
 
-      populate: Transition {
-        NumberAnimation {
-          properties: "x,y"
-          duration: 200
+      header: Rectangle {
+        anchors {
+          left: parent.left
+          right: parent.right
         }
-      }
-      add: Transition {
-        NumberAnimation {
-          properties: "opacity"
-          from: 0
-          to: 1
-          duration: 200
-        }
-        NumberAnimation {
-          properties: "scale"
-          from: 0
-          to: 1
-          duration: 200
-        }
-        PropertyAction {
-          property: "transformOrigin"
-          value: Item.TopLeft
-        }
+        color: "cyan"
+        height: 5
       }
 
-      displaced: Transition {
-        PropertyAction {
-          properties: "opacity, scale"
-          value: 1
+      footer: Rectangle {
+        anchors {
+          left: parent.left
+          right: parent.right
         }
-        NumberAnimation {
-          properties: "x,y"
-          duration: 200
-        }
+        color: "cyan"
+        height: 5
       }
 
-      // header: Rectangle {
-      //   anchors {
-      //     left: parent.left
-      //     right: parent.right
-      //   }
-      //   color: "cyan"
-      //   height: 5
-      // }
-
-      // footer: Rectangle {
-      //   anchors {
-      //     left: parent.left
-      //     right: parent.right
-      //   }
-      //   color: "cyan"
-      //   height: 5
-      // }
       highlight: Rectangle {
         anchors {
           left: parent.left
           right: parent.right
         }
-        color: "#F5F5F5"
+        color: "cyan"
         height: 10
+      }
+      section.property: "team"
+      section.criteria: ViewSection.FullString
+      section.delegate: Rectangle {
+        color: "#b0dfb0"
+        width: parent.width
+
+        implicitHeight: text.implicitHeight + 4
+        Text {
+          id: text
+          anchors.centerIn: parent
+          font.pixelSize: 16
+          font.bold: true
+          text: section
+        }
       }
     }
 
