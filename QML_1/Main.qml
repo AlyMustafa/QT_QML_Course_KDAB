@@ -1,121 +1,28 @@
-import QtQuick
-import QtQuick.Window
+import QtQuick 2.15
+import QtQuick.Window 2.15
+import Qt5Compat.GraphicalEffects
 
 Window {
   visible: true
-  width: 300
+  width: 600
   height: 300
+  color: "black"
 
-  Rectangle {
-    id: roots
-    anchors.fill: parent
-    gradient: Gradient {
-      GradientStop {
-        position: 0.0
-        color: "#F9B2D7"
-      }
-      GradientStop {
-        position: 1.0
-        color: "#CFECF3"
-      }
-    }
+  Text {
+    id: txt
+    anchors.centerIn: parent
+    text: "ALI MUSTAFA"
+    font.pixelSize: 50
+    color: "white"
+  }
 
-    ListModel {
-      id: nameModel
-      ListElement {
-        name: "Alice"
-      }
-      ListElement {
-        name: "Bob"
-      }
-      ListElement {
-        name: "Jane"
-      }
-      ListElement {
-        name: "Victor"
-      }
-      ListElement {
-        name: "Wendy"
-      }
-      ListElement {
-        name: "Ali"
-      }
-      ListElement {
-        name: "Alice"
-      }
-      ListElement {
-        name: "Bob"
-      }
-      ListElement {
-        name: "Jane"
-      }
-      ListElement {
-        name: "Victor"
-      }
-      ListElement {
-        name: "Wendy"
-      }
-    }
+  Glow {
+    anchors.fill: txt
+    source: txt
 
-    Component {
-      id: nameDelegate
-      Text {
-        readonly property ListView __lv: ListView.view
-        width: parent.width
-        text: model.name
-        font.pixelSize: 32
-        MouseArea {
-          anchors.fill: parent
-          onClicked: parent.__lv.currentIndex = model.index
-        }
-      }
-    }
-
-    ListView {
-      id: listview
-      width: parent.width
-      anchors.top: parent.top
-      anchors.bottom: label.top
-      model: nameModel
-      delegate: nameDelegate
-      clip: true
-      onCurrentIndexChanged: console.log(currentIndex)
-
-      header: Rectangle {
-        anchors {
-          left: parent.left
-          right: parent.right
-        }
-        color: "cyan"
-        height: 5
-      }
-
-      footer: Rectangle {
-        anchors {
-          left: parent.left
-          right: parent.right
-        }
-        color: "cyan"
-        height: 5
-      }
-
-      highlight: Rectangle {
-        anchors {
-          left: parent.left
-          right: parent.right
-        }
-        color: "cyan"
-        height: 10
-      }
-    }
-
-    Text {
-      id: label
-      anchors.bottom: parent.bottom
-      anchors.horizontalCenter: parent.horizontalCenter
-      color: "black"
-      text: "<b>" + listview.currentItem.text + "</b> is current"
-      font.pixelSize: 16
-    }
+    radius: 15
+    samples: 31
+    color: "cyan"
+    spread: 0.5
   }
 }

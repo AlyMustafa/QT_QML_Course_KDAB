@@ -1,161 +1,46 @@
 import QtQuick
 import QtQuick.Window
 
-Window {
+Rectangle {
   visible: true
-  width: 300
-  height: 300
+  width: 200
+  height: 200
 
-  Rectangle {
-    id: roots
-    anchors.fill: parent
-    gradient: Gradient {
-      GradientStop {
-        position: 0.0
-        color: "#303841"
-      }
-      GradientStop {
-        position: 1.0
-        color: "#FF5722"
-      }
+  ListModel {
+    id: nameModel
+    ListElement {
+      file: "Images/unlocked.png"
     }
-
-    ListModel {
-      id: nameModel
-      ListElement {
-        name: "Alice"
-      }
-      ListElement {
-        name: "Bob"
-      }
-      ListElement {
-        name: "Jane"
-      }
-      ListElement {
-        name: "Victor"
-      }
-      ListElement {
-        name: "Wendy"
-      }
-      ListElement {
-        name: "Ali"
-      }
-      ListElement {
-        name: "Alice"
-      }
-      ListElement {
-        name: "Bob"
-      }
-      ListElement {
-        name: "Jane"
-      }
-      ListElement {
-        name: "Victor"
-      }
-      ListElement {
-        name: "Wendy"
-      }
+    ListElement {
+      file: "Images/rocket.png"
     }
+    ListElement {
+      file: "Images/clock.png"
+    }
+    ListElement {
+      file: "Images/wp2757832.gif"
+    }
+  }
 
-    Component {
-      id: nameDelegate
-      Text {
+  Component {
+    id: nameDelegate
+    Row {
+      Image {
         readonly property ListView __lv: ListView.view
-        // width: parent.width
-        text: model.name
-        font.pixelSize: 32
-        MouseArea {
-          anchors.fill: parent
-          onClicked: {
-            nameModel.insert(index, {
-                               "name": "Item #" + nameModel.count
-                             })
-            parent.__lv.currentIndex = model.index
-          }
-        }
+        source: model.file
+        height: 120
+        width: 120
+        fillMode: Image.PreserveAspectFit
       }
     }
+  }
 
-    ListView {
-      id: listview
-      width: parent.width
-      anchors.top: parent.top
-      anchors.bottom: label.top
-      model: nameModel
-      delegate: nameDelegate
-      clip: true
-      onCurrentIndexChanged: console.log(currentIndex)
-
-      populate: Transition {
-        NumberAnimation {
-          properties: "x,y"
-          duration: 200
-        }
-      }
-      add: Transition {
-        NumberAnimation {
-          properties: "opacity"
-          from: 0
-          to: 1
-          duration: 200
-        }
-        NumberAnimation {
-          properties: "scale"
-          from: 0
-          to: 1
-          duration: 200
-        }
-        PropertyAction {
-          property: "transformOrigin"
-          value: Item.TopLeft
-        }
-      }
-
-      displaced: Transition {
-        PropertyAction {
-          properties: "opacity, scale"
-          value: 1
-        }
-        NumberAnimation {
-          properties: "x,y"
-          duration: 200
-        }
-      }
-
-      // header: Rectangle {
-      //   anchors {
-      //     left: parent.left
-      //     right: parent.right
-      //   }
-      //   color: "cyan"
-      //   height: 5
-      // }
-
-      // footer: Rectangle {
-      //   anchors {
-      //     left: parent.left
-      //     right: parent.right
-      //   }
-      //   color: "cyan"
-      //   height: 5
-      // }
-      highlight: Rectangle {
-        anchors {
-          left: parent.left
-          right: parent.right
-        }
-        color: "#F5F5F5"
-        height: 10
-      }
-    }
-
-    Text {
-      id: label
-      anchors.bottom: parent.bottom
-      anchors.horizontalCenter: parent.horizontalCenter
-      color: "black"
-      text: "<b>" + listview.currentItem.text + "</b> is current"
-      font.pixelSize: 16
-    }
+  GridView {
+    anchors.fill: parent
+    model: nameModel
+    // margin: 10
+    delegate: nameDelegate
+    clip: true
+    // onCurrentIndexChanged: console.log(currentIndex)
   }
 }
