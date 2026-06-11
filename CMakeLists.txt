@@ -44,6 +44,11 @@ qt_add_qml_module(appQML_1
             Images/image7.jpg
             Images/image8.jpg
             Images/image9.jpg
+            Images/book.png
+            Images/battery_full.png
+            Images/cruelty_free.png
+            Images/carpenter.png
+            Images/call.png
 
             QML_FILES LineEdit.qml
             QML_FILES CheckBox.qml
